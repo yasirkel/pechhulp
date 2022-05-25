@@ -2,6 +2,11 @@
 
 @section('content')
 <div class="container">
+
+    <div class="nav-menu">
+        <a class="btn btn-danger" href="{{route('pechmelding-form')}}">pechmelding</a>
+    </div>
+    
     @foreach ($abbonementen as $abbonement)
         @if ($abbonement->user_id != Auth::user()->id)
             <div class="row justify-content-center">

@@ -19,8 +19,15 @@ Route::get('/', function () {
 
 Auth::routes();
 
+// klant dashboard
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::post('/home-create-abbonement', [App\Http\Controllers\HomeController::class, 'createAbbonment'])->name('createAbbonment');
+
+// Pechmelding 
+Route::get('/pechmelding', [App\Http\Controllers\pechMeldingController::class, 'index'])->name('pechmelding-form');
+Route::post('/pechmelding-create', [App\Http\Controllers\pechMeldingController::class, 'createMelding'])->name('pechmelding-aanmaken');
+
+
 
 Auth::routes();
 
